@@ -7,17 +7,7 @@ pipeline {
 
   }
   stages {
-    stage('Install') {
-      steps {
-        sh 'npm install'
-      }
-    }
-    stage('Test') {
-      steps {
-        sh '#npm test --watchAll=true'
-      }
-    }
-    stage('Create docker image') {
+    stage('docker image') {
       steps {
         sh 'docker build -t demo .'
       }
