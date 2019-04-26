@@ -18,7 +18,27 @@ pipeline {
     }
     stage('Run docker') {
       steps {
-        sh 'docker run -t -p 3000:3000 demo'
+        sh '''docker stop demo 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+docker rm demo docker run -t -p 3000:3000 demo'''
       }
     }
   }
